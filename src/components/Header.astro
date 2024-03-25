@@ -9,7 +9,7 @@
           <p class="h-10 inline">LOGO</p>
         </span>
   
-        <span class="text-3xl cursor-pointer mx-2 md:hidden block" onclick="toggleMenu()">
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block" id="hamburger">
           <ion-icon name="menu"></ion-icon>
         </span>
       </div>
@@ -38,5 +38,7 @@
       let list = document.getElementById('menuList');
       list.classList.toggle('top-[80px]');
       list.classList.toggle('opacity-100');
-    }
+    };
+
+    document.getElementById('hamburger').addEventListener('click', toggleMenu);
   </script>
