@@ -1,26 +1,42 @@
-<header class="bg-[#f3f3f3]">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<nav class="flex justify-between items-center w-[92%] mx-auto">
-
-        <div class="flex flex-row gap-2">
-            <img src="/logo.png" alt="logo" width="28" height="28" class="object-contain items-center">
-            <p class="text-lg font-semibold text-center items-center pr-16">Logo</p>
-        </div>
-        <div class="absolute bg-white min-h-[60vh] left-0 top-[9%] w-full flex items-center px-5">
-            <ul class="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-8">
-                <li>
-                    <a class="hover:text-gray-500" href="#">Services</a>
-                </li>
-                <li>
-                    <a class="hover:text-gray-500" href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a class="hover:text-gray-500" href="#">Pricing</a>
-                </li>
-            </ul>
-        </div>
-        <div><button class="bg-[#a6c1ee] hover:bg-[#87acec] rounded-2xl text-white px-5 py-2">test</button></div>
-
-</nav>
-
-</header>
+<header class="bg-cyan-400">
+    <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
+      <div class="flex justify-between items-center">
+        <span class="text-2xl">
+          <img class="h-10 inline" src="../logo.png" alt="logo.png">
+          <p class="h-10 inline">LOGO</p>
+        </span>
+  
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block" onclick="toggleMenu()">
+          <ion-icon name="menu"></ion-icon>
+        </span>
+      </div>
+  
+      <ul id="menuList" class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ">
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-300">SERVICES</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-300">PORTFOLIO</a>
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-xl hover:text-cyan-500 duration-300">PRICING</a>
+        </li>
+      </ul>
+      <span class="mx-2 md:flex md:items-center z-[-1] md:z-auto md:static absolute gap-2">
+        <div>(303) 555-0105</div>
+        <div>example@website.com</div>
+        <div>EN</div>
+    </span>
+    </nav>
+  </header>
+  
+  <script>
+    function toggleMenu() {
+      let list = document.getElementById('menuList');
+      list.classList.toggle('top-[80px]');
+      list.classList.toggle('opacity-100');
+    }
+  </script>
